@@ -1,0 +1,97 @@
+.contact {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.contact__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__image img {
+  width: 90%;
+}
+
+.contact__form {
+  width: 70%;
+  margin: 0 auto;
+  box-shadow: 0 14px 16px rgb(0 0 0 / 20%), 0 -6px 10px rgb(0 0 0 / 20%);
+  border-radius: 20px;
+}
+
+.contact__form h2 {
+  margin-bottom: 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contact form {
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.contact__form .brand__button {
+  padding: 12px 30px;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+@media only screen and (max-width: 770px) {
+  .contact {
+    margin-top: 50px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact__input {
+  width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.contact__input .inputs {
+  height: 40px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.contact__input .inputs input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid gray;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.contact__input .inputs input:focus {
+  border-color: #f83292;
+}
+
+.contact__input .inputs label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  pointer-events: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.contact__input .inputs input:focus ~ label,
+.contact__input .inputs input:valid ~ label {
+  transform: translateY(-20px);
+  color: #f83292;
+}
