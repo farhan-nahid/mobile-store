@@ -1,0 +1,104 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+#banner {
+  margin-top: 70px;
+  background-image: url('../../../assets/images/banner-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner__section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.banner__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner__content h1 {
+  width: 60%;
+  font-size: 40px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.banner__content p {
+  font-size: 18px;
+  text-align: justify;
+  color: #666;
+  margin: 20px 0;
+}
+
+.banner__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner__image img {
+  width: 90%;
+  animation: 3s animated linear infinite;
+}
+
+@keyframes animated {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-60px);
+  }
+}
+
+.brand__color {
+  background-image: linear-gradient(90deg, #814096, #f83292);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.container {
+  width: 83%;
+  margin: 0 auto;
+  padding: 50px 0px;
+}
+
+.brand__button {
+  padding: 13px 50px 13px 30px;
+  border-radius: 35px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(to right, #814096, #f83292);
+  transition: all 0.8s;
+  display: inline-block;
+  position: relative;
+  border: 0;
+}
+
+.brand__button:focus {
+  outline: 0;
+}
+
+.brand__button:hover {
+  background-image: linear-gradient(to right, #f83292, #814096);
+  letter-spacing: 1.5px;
+}
+
+#banner .brand__button::after {
+  position: absolute;
+  content: '\f218';
+  font-family: 'Font Awesome 5 Free';
+  right: 20px;
+  top: 14px;
+}

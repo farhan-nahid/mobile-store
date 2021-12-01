@@ -1,5 +1,7 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
 nav {
-  height: 60px;
+  height: 70px;
   box-shadow: 10px 2px 30px gray;
   background-color: #fff;
   padding: 20px 8%;
@@ -15,8 +17,6 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-
-@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 .logo {
   list-style-type: none;

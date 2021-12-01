@@ -23,10 +23,10 @@ const Navigation = () => {
             <a href='#'>Home</a>
           </li>
           <li>
-            <a href='#feature'>Feature</a>
+            <a href='#feature'>Products</a>
           </li>
           <li>
-            <a href='#about'>About</a>
+            <a href='#about'>Dashboard</a>
           </li>
           <li>
             <a href='#review'>Review</a>
