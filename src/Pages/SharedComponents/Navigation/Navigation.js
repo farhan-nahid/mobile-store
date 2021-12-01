@@ -1,41 +1,42 @@
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { NavLink, useHistory } from 'react-router-dom';
 import './Navigation.css';
 
 const Navigation = () => {
+  const history = useHistory();
   return (
     <nav>
       <ul className='navbar'>
         <ul className='logo'>
           <li>
-            <a href='#'>Mobile Store</a>
+            <NavLink to='/'>Mobile Store</NavLink>
           </li>
         </ul>
 
         <input type='checkbox' name='checkbox' id='click' />
-        <label for='click'>
+        <label htmlFor='click'>
           <FontAwesomeIcon icon={faBars} />
         </label>
 
         <ul className='nav__items'>
           <li>
-            <a href='#'>Home</a>
+            <NavLink to='/home'>Home</NavLink>
           </li>
           <li>
-            <a href='#feature'>Products</a>
+            <NavLink to='/products'>Products</NavLink>
           </li>
           <li>
-            <a href='#about'>Dashboard</a>
+            <NavLink to='/dashboard'>Dashboard</NavLink>
           </li>
           <li>
-            <a href='#review'>Review</a>
-          </li>
-          <li>
-            <a href='#pricing'>Pricing</a>
-          </li>
-          <li>
-            <a href='#contact__us'>Contact</a>
+            <button
+              onClick={() => history.push('/login')}
+              className='brand__button'
+            >
+              Login
+            </button>
           </li>
         </ul>
       </ul>

@@ -59,46 +59,20 @@
   }
 }
 
-.brand__color {
-  background-image: linear-gradient(90deg, #814096, #f83292);
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-.container {
-  width: 83%;
-  margin: 0 auto;
-  padding: 50px 0px;
-}
-
-.brand__button {
-  padding: 13px 50px 13px 30px;
-  border-radius: 35px;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  background: linear-gradient(to right, #814096, #f83292);
-  transition: all 0.8s;
-  display: inline-block;
-  position: relative;
-  border: 0;
-}
-
-.brand__button:focus {
-  outline: 0;
-}
-
-.brand__button:hover {
-  background-image: linear-gradient(to right, #f83292, #814096);
-  letter-spacing: 1.5px;
-}
-
 #banner .brand__button::after {
   position: absolute;
   content: '\f218';
   font-family: 'Font Awesome 5 Free';
   right: 20px;
   top: 14px;
+}
+
+@media only screen and (max-width: 770px) {
+  .banner__section {
+    grid-template-columns: 1fr;
+  }
+
+  .banner__content {
+    order: 2;
+  }
 }
