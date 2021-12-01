@@ -1,0 +1,91 @@
+#subscribe {
+  background-image: url('../../../assets/images/subscribe-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+  margin-top: 100px;
+}
+
+#subscribe h2 {
+  color: #fff;
+}
+
+#subscribe p {
+  color: #fff;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto 50px auto;
+}
+
+.email__form {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#email {
+  margin-top: 30px;
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+  border: 4px solid #fff;
+  border-radius: 35px;
+  padding: 18px 30px;
+  background-color: transparent;
+  color: #fff;
+  letter-spacing: 1.5px;
+  font-family: inherit;
+}
+
+#subscribe h2 {
+  text-align: center;
+  color: #fff;
+}
+
+#subscribe p {
+  margin: 15px auto 30px auto;
+  width: 75%;
+}
+
+#email::placeholder {
+  color: #fff;
+}
+
+.submit__button {
+  position: absolute;
+  right: 16px;
+  padding: 10px 25px;
+  background-color: aliceblue;
+  color: #f83292;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 770px) {
+  #subscribe {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 644px) {
+  .submit__button {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+
+  #email {
+    padding: 15px 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .email__form {
+    width: 100%;
+  }
+}
