@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+*::selection {
+  background-color: #f83292;
+  color: #fff;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -23,6 +28,13 @@ img {
 .container {
   width: 1500px;
   margin: 0 auto;
+}
+
+.brand__color {
+  background-image: linear-gradient(90deg, #814096, #f83292);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 @media only screen and (max-width: 1550px) {

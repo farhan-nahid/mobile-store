@@ -1,0 +1,108 @@
+nav {
+  height: 60px;
+  box-shadow: 10px 2px 30px gray;
+  background-color: #fff;
+  padding: 20px 8%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.logo {
+  list-style-type: none;
+}
+
+.logo li {
+  display: inline-block;
+}
+
+.logo li a {
+  font-size: 20px;
+  font-weight: 600;
+  background-image: linear-gradient(90deg, #814096, #f83292);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-decoration: none;
+}
+
+.nav__items {
+  list-style-type: none;
+}
+
+.nav__items li {
+  display: inline-block;
+}
+
+.nav__items li a {
+  font-size: 17px;
+  font-weight: 500;
+  color: #333333;
+  margin-left: 25px;
+  transition: 0.8s;
+  text-decoration: none;
+}
+
+.nav__items li a:hover {
+  background-image: linear-gradient(90deg, #814096, #f83292);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.navbar__icon i {
+  font-size: 20px;
+}
+
+nav label,
+nav label i,
+nav input {
+  display: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 770px) {
+  .nav__items {
+    position: fixed;
+    top: 60px;
+    right: -40%;
+    height: 100vh;
+    width: 40%;
+    display: block;
+    text-align: center;
+    background-image: linear-gradient(90deg, #814096, #f83292);
+    transition: all 0.5s ease-in;
+    opacity: 0.8;
+  }
+
+  nav input:checked ~ .nav__items {
+    right: 0;
+  }
+
+  .nav__items li {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .nav__items li a {
+    color: #fff;
+  }
+
+  .nav__items li a:hover {
+    color: #09f8f8;
+  }
+
+  nav label {
+    display: block;
+  }
+}
