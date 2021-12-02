@@ -1,0 +1,74 @@
+.dashboard__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 6fr;
+  background-image: url('../../../assets/images/dashboard-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+aside {
+  min-height: 100vh;
+  max-height: 100%;
+  box-shadow: 0 14px 16px rgb(0 0 0 / 20%), 0 -6px 10px rgb(0 0 0 / 20%);
+  background: #fff;
+}
+
+aside h3 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+aside .aside__nav {
+  margin-top: 50px;
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+aside .aside__nav ul {
+  padding: 0;
+  margin: 0;
+}
+aside .aside__nav ul li {
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+.sidebar__active {
+  color: #814096 !important;
+  font-weight: 600;
+  border-left: 5px solid #814096;
+  width: 100%;
+}
+
+aside .aside__nav__link li {
+  padding: 5px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #333;
+}
+
+aside .aside__nav__link li a {
+  color: #333;
+  display: block;
+}
+
+aside .aside__nav__link li:hover,
+aside .aside__nav__link li a:hover {
+  background-color: #e2eaed;
+  color: #814096;
+}
+
+aside .svg-inline--fa {
+  margin-left: 7px;
+  margin-right: 10px;
+}
+
+aside .brand__button {
+  border-radius: 10px;
+  padding: 10px 20px;
+}

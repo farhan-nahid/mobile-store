@@ -31,7 +31,7 @@ const Navigation = () => {
             <NavLink to='/products'>Products</NavLink>
           </li>
           <li>
-            <NavLink to='/dashboard'>Dashboard</NavLink>
+            <NavLink to='/dashboard/profile'>Dashboard</NavLink>
           </li>
           {!loggedInUser ? (
             <li>
