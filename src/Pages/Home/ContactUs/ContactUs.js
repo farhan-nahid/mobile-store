@@ -3,28 +3,30 @@ import contactImg from '../../../assets/images/contact-me.png';
 import './ContactUs.css';
 
 const ContactUs = () => {
+  const handelSubmit = (e) => e.preventDefault();
+
   return (
-    <section id='container'>
+    <section className='container'>
       <div className='contact'>
         <div className='contact__image'>
           <img src={contactImg} alt='contact' />
         </div>
         <div className='contact__form'>
           <h2 className='brand__color'>Contact Us</h2>
-          <form className='contact__input'>
-            <div class='inputs'>
+          <form className='contact__input' onSubmit={handelSubmit}>
+            <div className='inputs'>
               <input type='text' required />
               <label>Name</label>
             </div>
-            <div class='inputs'>
+            <div className='inputs'>
               <input type='text' required />
               <label>Email</label>
             </div>
-            <div class='inputs'>
+            <div className='inputs'>
               <input type='number' required />
               <label>Phone</label>
             </div>
-            <div class='inputs'>
+            <div className='inputs'>
               <input type='text' required />
               <label>Your Message</label>
             </div>

@@ -4,7 +4,7 @@ nav {
   height: 70px;
   box-shadow: 10px 2px 30px gray;
   background-color: #fff;
-  padding: 20px 8%;
+  padding: 20px 3%;
   position: fixed;
   top: 0;
   left: 0;
@@ -19,6 +19,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
 }
 
 .logo {
