@@ -1,5 +1,6 @@
 import React from 'react';
 import bannerImg from '../../../assets/images/banner.png';
+import rank from '../../../assets/images/rank.png';
 import './Banner.css';
 
 const Banner = () => {
@@ -8,8 +9,13 @@ const Banner = () => {
       <div className='container banner__section'>
         <div className='banner__content'>
           <div>
+            <div className='ranking__area'>
+              <img src={rank} alt='rank' />
+              <h6>#1 Best Seller of 2020</h6>
+            </div>
             <h1>
-              BEST MOBILE <span className='brand__color'>Showroom</span>
+              BEST MOBILE <span className='brand__color'>Showroom</span> For
+              Your Modern Lifestyle
             </h1>
             <p>
               We provide best mobile phone to our customers. Honesty is the key

@@ -18,6 +18,23 @@
   gap: 30px;
 }
 
+.ranking__area {
+  display: flex;
+  align-items: center;
+  width: 270px;
+  background-color: #e2eaed;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.ranking__area h6 {
+  font-size: 13px;
+  margin-left: 15px;
+  margin-bottom: 0;
+  font-weight: 900;
+  color: #242f51;
+}
+
 .banner__content {
   display: flex;
   flex-direction: column;
@@ -25,10 +42,11 @@
 }
 
 .banner__content h1 {
-  width: 60%;
+  width: 80%;
   font-size: 40px;
-  font-weight: 600;
+  font-weight: 500;
   color: #333333;
+  line-height: 60px;
 }
 
 .banner__content p {

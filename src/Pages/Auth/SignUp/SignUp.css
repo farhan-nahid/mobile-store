@@ -67,7 +67,7 @@
   width: 100%;
   height: 40px;
   border: none;
-  border-bottom: 2px solid gray;
+  border-bottom: 1px solid gray;
   outline: none;
   font-size: 16px;
   transition: 0.3s;
@@ -115,7 +115,7 @@ input[type='submit']:hover {
   letter-spacing: 1.5px !important;
 }
 
-img {
+.signUp__bg img {
   width: 100%;
 }
 
