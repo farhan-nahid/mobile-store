@@ -11,8 +11,8 @@ import './SignUp.css';
 
 const SignUp = () => {
   const [signUpData, setSignUpData] = useState({});
-  const { emailSignup } = useAuth();
   const history = useHistory();
+  const { emailSignup, googleSignIn, gitHubSignIn } = useAuth();
 
   const handleBlur = (e) => {
     const field = e.target.name;
@@ -99,11 +99,17 @@ const SignUp = () => {
 
             <h5 className='other__methods'>OR</h5>
 
-            <button className='google__button'>
+            <button
+              className='google__button'
+              onClick={() => googleSignIn(history, '/')}
+            >
               <FontAwesomeIcon icon={faGoogle} />
               Google sign in
             </button>
-            <button className='github__button'>
+            <button
+              className='github__button'
+              onClick={() => gitHubSignIn(history, '/')}
+            >
               <FontAwesomeIcon icon={faGithub} />
               GitHub sign in
             </button>
