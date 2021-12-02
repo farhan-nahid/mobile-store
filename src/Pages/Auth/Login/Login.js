@@ -1,6 +1,6 @@
 import { faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import loginImg from '../../../assets/images/login.png';
@@ -14,6 +14,10 @@ const Login = () => {
   const [signInData, setSignInData] = useState({});
   const { emailSignIn, googleSignIn, gitHubSignIn } = useAuth();
   const history = useHistory();
+
+  useEffect(() => {
+    document.title = 'LogIn | Mobile Store';
+  }, []);
 
   const handleBlur = (e) => {
     const field = e.target.name;
