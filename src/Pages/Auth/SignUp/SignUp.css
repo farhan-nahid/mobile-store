@@ -3,12 +3,37 @@
   border-right: 1px solid lightgray;
 }
 
-.login__bg {
+.signUp__bg {
   background-image: url('../../../assets/images/login-bg.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 100px 0;
+  position: relative;
+}
+
+.password__information {
+  position: absolute;
+  top: 40%;
+  right: 10px;
+  content: '';
+  width: 230px;
+  background-color: #fff;
+  box-shadow: 0 14px 16px rgb(0 0 0 / 20%), 0 -6px 10px rgb(0 0 0 / 20%);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.password__information ul {
+  font-weight: 500;
+  padding: 0;
+  font-size: 16px;
+}
+
+.password__information ul li {
+  padding-left: 20px;
+  line-height: 30px;
+  list-style-type: none;
 }
 
 .grid__container {

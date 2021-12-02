@@ -15,6 +15,12 @@ nav {
   justify-content: center;
 }
 
+nav img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;

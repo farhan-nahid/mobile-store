@@ -17,7 +17,9 @@ const useFirebase = () => {
   initializeAuthentication();
   const auth = getAuth();
 
-  const handleEmailSignup = (name, email, password) => {
+  // email password signUp function
+
+  const emailSignup = (name, email, password, history) => {
     const loading = toast.loading('Creating User... Please wait!!!');
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -28,6 +30,7 @@ const useFirebase = () => {
         toast.dismiss(loading);
         toast.success('Creating a new user successfully...');
         setLoggedInUser(userCredential.user);
+        history.replace('/');
       })
       .catch((error) => {
         toast.dismiss(loading);
@@ -36,13 +39,17 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
 
-  const handleEmailSignIn = (email, password) => {
+  // email password signIn function
+
+  const emailSignIn = (email, password, history, location) => {
     const loading = toast.loading('Finding Account... Please wait!!!');
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         toast.dismiss(loading);
         toast.success('logged in successfully...');
         setLoggedInUser(userCredential.user);
+        const redirect_URI = location.state?.from || '/';
+        history.replace(redirect_URI);
       })
       .catch((error) => {
         toast.dismiss(loading);
@@ -80,8 +87,8 @@ const useFirebase = () => {
   return {
     isLoading,
     loggedInUser,
-    handleEmailSignup,
-    handleEmailSignIn,
+    emailSignup,
+    emailSignIn,
     logOut,
   };
 };

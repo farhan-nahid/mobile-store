@@ -2,10 +2,13 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
+import ProfilePopper from '../ProfilePopper/ProfilePopper';
 import './Navigation.css';
 
 const Navigation = () => {
   const history = useHistory();
+  const { loggedInUser } = useAuth();
   return (
     <nav>
       <ul className='navbar'>
@@ -30,14 +33,20 @@ const Navigation = () => {
           <li>
             <NavLink to='/dashboard'>Dashboard</NavLink>
           </li>
-          <li>
-            <button
-              onClick={() => history.push('/login')}
-              className='brand__button'
-            >
-              Login
-            </button>
-          </li>
+          {!loggedInUser ? (
+            <li>
+              <button
+                onClick={() => history.push('/login')}
+                className='brand__button'
+              >
+                Login
+              </button>
+            </li>
+          ) : (
+            <li>
+              <ProfilePopper />
+            </li>
+          )}
         </ul>
       </ul>
     </nav>
