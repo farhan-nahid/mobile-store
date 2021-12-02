@@ -1,0 +1,14 @@
+.grid__container .right__border {
+  border-left: 0;
+  border-right: 1px solid lightgray;
+}
+
+@media only screen and (max-width: 1050px) {
+  .grid__container .right__border {
+    border-right: 0 !important;
+  }
+
+  .login__signUp__methods {
+    order: 2;
+  }
+}

@@ -1,5 +1,5 @@
 .contact {
-  margin-top: 100px;
+  margin: 100px 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
@@ -91,7 +91,7 @@ input[type='number'] {
 
 @media only screen and (max-width: 770px) {
   .contact {
-    margin-top: 50px;
+    margin: 50px 0;
     grid-template-columns: 1fr;
   }
 

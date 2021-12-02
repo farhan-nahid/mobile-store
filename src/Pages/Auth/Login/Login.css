@@ -1,0 +1,199 @@
+.login__bg {
+  background-image: url('../../../assets/images/login-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+}
+
+.grid__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  border: 1px solid lightgrey;
+  margin: 50px auto;
+  width: 1000px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px lightgray;
+}
+
+.grid__container .login__signUp__methods {
+  padding: 50px;
+  border-left: 1px solid lightgrey;
+}
+
+.login__signUp__input {
+  width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.login__signUp__input .inputs {
+  height: 40px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.login__signUp__input .inputs input[type='text'],
+.login__signUp__input .inputs input[type='password'] {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid gray;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.login__signUp__input .inputs input[type='text']:focus,
+.login__signUp__input .inputs input[type='password']:focus {
+  border-color: #f83292;
+}
+
+.login__signUp__input .inputs label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  pointer-events: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.login__signUp__input .inputs input[type='text']:focus ~ label,
+.login__signUp__input .inputs input[type='password']:focus ~ label,
+.login__signUp__input .inputs input[type='text']:valid ~ label,
+.login__signUp__input .inputs input[type='password']:valid ~ label {
+  transform: translateY(-20px);
+  color: #f83292;
+}
+
+input[type='submit'] {
+  padding: 13px 30px;
+  width: 100%;
+  border-radius: 35px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(to right, #814096, #f83292);
+  transition: all 0.8s;
+  display: inline-block;
+  position: relative;
+  border: 0;
+}
+
+input[type='submit']:hover {
+  background-image: linear-gradient(to right, #f83292, #814096) !important;
+  letter-spacing: 1.5px !important;
+}
+
+img {
+  width: 100%;
+}
+
+.toggle__link {
+  margin: 15px 0;
+  text-align: right;
+}
+
+.toggle__link a {
+  background-image: linear-gradient(90deg, #814096, #f83292);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.toggle__link a:hover {
+  background-image: linear-gradient(90deg, #814096, #f83292);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-decoration: underline;
+}
+
+.other__methods {
+  margin: 50px 0;
+  text-align: center;
+  font-size: 18px;
+  position: relative;
+}
+
+.other__methods::before {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 40%;
+  left: 0;
+  top: 50%;
+  background-color: lightgrey;
+}
+
+.other__methods::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 40%;
+  right: 0;
+  top: 50%;
+  background-color: lightgrey;
+}
+
+.google__button .svg-inline--fa,
+.github__button .svg-inline--fa {
+  margin-right: 10px;
+}
+
+.google__button,
+.github__button {
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px 20px;
+  outline: 0;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.5s;
+  font-weight: 700;
+}
+
+.google__button {
+  margin-bottom: 20px;
+  background-color: #1197f5;
+}
+
+.google__button:hover {
+  color: #1197f5;
+  border: 2px solid #1197f5;
+  background-color: #fff;
+}
+
+.github__button {
+  background-color: #aeb5bb;
+}
+
+.github__button:hover {
+  color: #aeb5bb;
+  border: 2px solid #aeb5bb;
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 1050px) {
+  .grid__container {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+
+  .grid__container .login__signUp__methods {
+    border-left: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .grid__container {
+    margin: 150px auto;
+  }
+}
