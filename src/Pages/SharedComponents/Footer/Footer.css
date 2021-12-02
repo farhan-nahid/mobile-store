@@ -24,7 +24,8 @@ footer {
   position: absolute;
   height: 2px;
   background-color: #fff;
-  width: 50px;
+  width: 70px;
+  left: 15px;
   bottom: -10px;
 }
 

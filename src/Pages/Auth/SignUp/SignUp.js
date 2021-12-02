@@ -1,6 +1,6 @@
 import { faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import signupImg from '../../../assets/images/signup.png';
 import Footer from '../../SharedComponents/Footer/Footer';
@@ -8,27 +8,66 @@ import Navigation from '../../SharedComponents/Navigation/Navigation';
 import './SignUp.css';
 
 const SignUp = () => {
+  const [signUpData, setSignUpData] = useState({});
+
+  const handleBlur = (e) => {
+    const field = e.target.name;
+    console.log(field);
+    const value = e.target.value;
+    console.log(value);
+    const newData = { ...signUpData };
+    newData[field] = value;
+    setSignUpData(newData);
+  };
+
+  const handleEmailSignUp = (e) => {
+    e.preventDefault();
+    console.log(signUpData);
+  };
+
   return (
     <>
       <Navigation />
       <section className='login__bg'>
         <div className='container grid__container'>
-          <div className='login__signUp__methods right__border'>
-            <form className='login__signUp__input'>
+          <div className='right__border'>
+            <form className='login__signUp__input' onSubmit={handleEmailSignUp}>
               <div className='inputs'>
-                <input type='text' required />
+                <input
+                  name='name'
+                  type='text'
+                  required
+                  onBlur={handleBlur}
+                  autoComplete='none'
+                />
                 <label>Your Name</label>
               </div>
               <div className='inputs'>
-                <input type='text' required />
+                <input
+                  name='email'
+                  type='text'
+                  required
+                  onBlur={handleBlur}
+                  autoComplete='off'
+                />
                 <label>Your Email</label>
               </div>
               <div className='inputs'>
-                <input type='password' required />
+                <input
+                  type='password'
+                  required
+                  onBlur={handleBlur}
+                  name='password'
+                />
                 <label>Password</label>
               </div>
               <div className='inputs'>
-                <input type='password' required />
+                <input
+                  type='password'
+                  required
+                  onBlur={handleBlur}
+                  name='confirmPassword'
+                />
                 <label>Confirm Password</label>
               </div>
               <input type='submit' value='Login' />

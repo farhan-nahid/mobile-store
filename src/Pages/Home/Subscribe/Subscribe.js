@@ -17,7 +17,8 @@ const Subscribe = () => {
           <input
             type='email'
             id='email'
-            autoComplete='off'
+            name='subscribe'
+            autoComplete='none'
             placeholder='Enter Your Email'
             required
           />
