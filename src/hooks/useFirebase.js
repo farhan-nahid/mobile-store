@@ -1,8 +1,11 @@
 import {
   createUserWithEmailAndPassword,
   getAuth,
+  GithubAuthProvider,
+  GoogleAuthProvider,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signInWithPopup,
   signOut,
   updateProfile,
 } from 'firebase/auth';
@@ -15,7 +18,41 @@ const useFirebase = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   initializeAuthentication();
+  const googleProvider = new GoogleAuthProvider();
+  const gitHubProvider = new GithubAuthProvider();
   const auth = getAuth();
+
+  // google signIn/signUp function
+
+  const googleSignIn = (history, location) => {
+    signInWithPopup(auth, googleProvider)
+      .then((userCredential) => {
+        toast.success('Logged in successfully...');
+        setLoggedInUser(userCredential.user);
+        const redirect_URI = location.state?.from || '/';
+        history.replace(redirect_URI);
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      })
+      .finally(() => setIsLoading(false));
+  };
+
+  // gitHub signIn/signUp function
+
+  const gitHubSignIn = (history, location) => {
+    signInWithPopup(auth, gitHubProvider)
+      .then((userCredential) => {
+        toast.success('Logged in successfully...');
+        setLoggedInUser(userCredential.user);
+        const redirect_URI = location.state?.from || '/';
+        history.replace(redirect_URI);
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      })
+      .finally(() => setIsLoading(false));
+  };
 
   // email password signUp function
 
@@ -87,6 +124,8 @@ const useFirebase = () => {
   return {
     isLoading,
     loggedInUser,
+    googleSignIn,
+    gitHubSignIn,
     emailSignup,
     emailSignIn,
     logOut,

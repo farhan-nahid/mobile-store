@@ -12,7 +12,7 @@ import './Login.css';
 const Login = () => {
   const location = useLocation();
   const [signInData, setSignInData] = useState({});
-  const { emailSignIn } = useAuth();
+  const { emailSignIn, googleSignIn, gitHubSignIn } = useAuth();
   const history = useHistory();
 
   const handleBlur = (e) => {
@@ -69,11 +69,17 @@ const Login = () => {
 
             <h5 className='other__methods'>OR</h5>
 
-            <button className='google__button'>
+            <button
+              className='google__button'
+              onClick={() => googleSignIn(history, location)}
+            >
               <FontAwesomeIcon icon={faGoogle} />
               Google sign in
             </button>
-            <button className='github__button'>
+            <button
+              className='github__button'
+              onClick={() => gitHubSignIn(history, location)}
+            >
               <FontAwesomeIcon icon={faGithub} />
               GitHub sign in
             </button>
