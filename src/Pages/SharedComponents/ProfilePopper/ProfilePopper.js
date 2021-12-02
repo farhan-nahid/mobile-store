@@ -19,17 +19,28 @@ const ProfilePopper = () => {
   return (
     <div ref={ref}>
       <img
+        style={{ border: '1px solid #814096' }}
         onClick={handleClick}
         src={loggedInUser.photoURL}
         alt={loggedInUser.name}
-        className='rounded-circle navbar__img'
+        className='rounded-circle'
       />
 
       <Overlay show={show} target={target} placement='bottom' container={ref}>
         <Popover id='popover-contained' className='profile__body'>
           <Popover.Body>
-            <h6>{loggedInUser.displayName}</h6>
-            <p>{loggedInUser.email}</p>
+            <img
+              onClick={handleClick}
+              src={loggedInUser.photoURL}
+              alt={loggedInUser.name}
+              className='rounded-circle profile__popper'
+            />
+            <h6>
+              <strong>{loggedInUser.displayName}</strong>
+            </h6>
+            <p>
+              <strong>{loggedInUser.email}</strong>
+            </p>
             <button onClick={logOut} className='brand__button'>
               <FontAwesomeIcon icon={faSignOutAlt} /> Log Out
             </button>
