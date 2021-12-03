@@ -54,6 +54,31 @@
 .order__details p {
   margin-top: 7px;
   font-size: 12px;
+  font-weight: 700;
+}
+
+.orders__details h4 {
+  font-size: 14px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.order__pending {
+  color: #a2893e;
+  background: #ffbb3e4b;
+}
+
+.order__rejected {
+  color: #ff4545;
+  background: #ffbbbb70;
+}
+
+.order__shipped {
+  color: #009444;
+  background: #c6ffe063;
 }
 
 @media only screen and (max-width: 450px) {

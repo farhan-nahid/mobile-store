@@ -6,7 +6,8 @@ import cross from '../../../assets/images/cross.png';
 import './MyOrderCard.css';
 
 const MyOrderCard = ({ item, orders, setOrders }) => {
-  const { _id, image, productName, productQuantity, orderTime, email } = item;
+  const { _id, image, productName, productQuantity, orderTime, email, status } =
+    item;
 
   const handleCancelOrder = (id) => {
     swal({
@@ -52,6 +53,7 @@ const MyOrderCard = ({ item, orders, setOrders }) => {
           <h6>Quantity : {productQuantity}</h6>
           <h6>Date : {orderTime}</h6>
           <p>Email : {email}</p>
+          <h4 className={`order__${status.toLowerCase()}`}>{status}</h4>
         </div>
       </div>
     </div>

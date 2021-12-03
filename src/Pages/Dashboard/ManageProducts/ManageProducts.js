@@ -10,6 +10,7 @@ import './ManageProduct.css';
 
 const ManageProducts = () => {
   const [products, setProducts] = useProducts();
+
   const handleUpdateProduct = () => {};
   const handleDeleteProduct = (id) => {
     swal({
@@ -39,6 +40,7 @@ const ManageProducts = () => {
       }
     });
   };
+
   return (
     <section className='product__manage'>
       <h3>Manage product</h3>
@@ -74,7 +76,7 @@ const ManageProducts = () => {
                   <div className='product__col align__items'>
                     <span
                       className='productAction__btn me-2'
-                      onClick={handleUpdateProduct}
+                      onClick={() => handleUpdateProduct(product._id)}
                     >
                       <img src={editIcon} alt='editIcon' />
                     </span>

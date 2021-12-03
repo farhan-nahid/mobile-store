@@ -13,6 +13,7 @@ import React, { useEffect } from 'react';
 import { NavLink, Route, Switch, useRouteMatch } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import AddProduct from '../AddProduct/AddProduct';
+import ManageOrders from '../ManageOrders/ManageOrders';
 import ManageProducts from '../ManageProducts/ManageProducts';
 import MyOrders from '../MyOrders/MyOrders';
 import Pay from '../Pay/Pay';
@@ -84,6 +85,16 @@ const Dashboard = () => {
                 Manage Product
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to={`${url}/manage-orders`}
+                activeClassName='sidebar__active'
+              >
+                {' '}
+                <FontAwesomeIcon icon={faList} />
+                Manage Orders
+              </NavLink>
+            </li>
             <li onClick={logOut}>
               <FontAwesomeIcon icon={faSignOutAlt} /> Sign Out
             </li>
@@ -108,6 +119,7 @@ const Dashboard = () => {
           <Route path={`${path}/pay`} component={Pay} />
           <Route path={`${path}/add-product`} component={AddProduct} />
           <Route path={`${path}/manage-products`} component={ManageProducts} />
+          <Route path={`${path}/manage-orders`} component={ManageOrders} />
         </Switch>
       </div>
     </section>
