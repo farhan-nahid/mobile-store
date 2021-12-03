@@ -1,0 +1,27 @@
+.all__products {
+  margin-top: 120px;
+  margin-bottom: 80px;
+}
+
+.all__products h3 {
+  text-align: center;
+}
+
+.all__product__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .all__product__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .all__product__container {
+    grid-template-columns: 1fr;
+  }
+}

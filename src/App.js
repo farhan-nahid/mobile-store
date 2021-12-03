@@ -3,6 +3,7 @@ import { Toaster } from 'react-hot-toast';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './contexts/AuthProvider';
+import Products from './Pages/AllProducts/Products/Products';
 import PrivateRoute from './Pages/Auth/PrivateRoute/PrivateRoute';
 import PreLoader from './Pages/SharedComponents/PreLoader/PreLoader';
 import ScrollToTop from './Pages/SharedComponents/ScrollToTop/ScrollToTop';
@@ -23,6 +24,7 @@ function App() {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/home' component={Home} />
+            <Route path='/products' component={Products} />
             <Route path='/login' component={Login} />
             <Route path='/signup' component={SignUp} />
             <PrivateRoute path='/order/:id'>
