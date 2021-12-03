@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import useProducts from '../../../hooks/useProducts';
 import Product from '../../Home/Product/Product';
 import Footer from '../../SharedComponents/Footer/Footer';
@@ -8,6 +8,11 @@ import './Products.css';
 
 const Products = () => {
   const [products] = useProducts();
+
+  useEffect(() => {
+    document.title = 'All Products | Mobile Store';
+  }, []);
+
   return (
     <>
       <Navigation />
