@@ -1,0 +1,33 @@
+.product__card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px #808080;
+  text-align: center;
+}
+
+.product__card .brand__button {
+  padding: 10px 30px;
+}
+
+.product__card img {
+  width: 250px;
+  object-fit: cover;
+  overflow: hidden;
+  height: 250px;
+}
+
+.card__content {
+  padding: 20px;
+}
+
+.card__content h4,
+.card__content p {
+  text-align: center;
+}
+
+.card__price__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

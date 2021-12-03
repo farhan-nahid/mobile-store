@@ -3,6 +3,7 @@ import Footer from '../../SharedComponents/Footer/Footer';
 import Navigation from '../../SharedComponents/Navigation/Navigation';
 import Banner from '../Banner/Banner';
 import ContactUs from '../ContactUs/ContactUs';
+import Products from '../Products/Products';
 import Subscribe from '../Subscribe/Subscribe';
 import Testimonials from '../Testimonials/Testimonials';
 
@@ -15,6 +16,7 @@ const Home = () => {
     <>
       <Navigation />
       <Banner />
+      <Products />
       <Subscribe />
       <Testimonials />
       <ContactUs />

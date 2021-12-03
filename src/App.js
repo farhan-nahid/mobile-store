@@ -9,6 +9,7 @@ import ScrollToTop from './Pages/SharedComponents/ScrollToTop/ScrollToTop';
 const Home = lazy(() => import('./Pages/Home/Home/Home'));
 const Login = lazy(() => import('./Pages/Auth/Login/Login'));
 const SignUp = lazy(() => import('./Pages/Auth/SignUp/SignUp'));
+const OrderNow = lazy(() => import('./Pages/OrderNow/OrderNow'));
 const Dashboard = lazy(() => import('./Pages/Dashboard/Dashboard/Dashboard'));
 const NotFoundRoute = lazy(() => import('./Pages/NotFoundRoute/NotFoundRoute'));
 
@@ -24,6 +25,9 @@ function App() {
             <Route path='/home' component={Home} />
             <Route path='/login' component={Login} />
             <Route path='/signup' component={SignUp} />
+            <PrivateRoute path='/order/:id'>
+              <OrderNow />
+            </PrivateRoute>
             <PrivateRoute path='/dashboard'>
               <Dashboard />
             </PrivateRoute>

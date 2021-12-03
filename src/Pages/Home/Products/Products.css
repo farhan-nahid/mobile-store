@@ -1,0 +1,30 @@
+.products {
+  background-image: url('../../../assets/images/products-bg.png');
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: auto;
+  margin-top: 100px;
+}
+
+.products h3 {
+  text-align: center;
+}
+
+.product__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 80px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .product__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .product__container {
+    grid-template-columns: 1fr;
+  }
+}
