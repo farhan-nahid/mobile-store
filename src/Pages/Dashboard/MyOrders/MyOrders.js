@@ -18,11 +18,16 @@ const MyOrders = () => {
 
   return (
     <section className='my__order__container'>
-      <h3>This is my Order</h3>
+      <h3>My Order</h3>
       {orders.length ? (
         <div className='my__orders'>
           {orders.map((item) => (
-            <MyOrderCard key={item._id} item={item} />
+            <MyOrderCard
+              key={item._id}
+              item={item}
+              orders={orders}
+              setOrders={setOrders}
+            />
           ))}
         </div>
       ) : (
