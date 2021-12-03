@@ -1,0 +1,35 @@
+.my__profile {
+  margin-top: 50px;
+}
+
+.my__profile h3 {
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+  font-weight: 500;
+}
+
+.profile__container {
+  width: 70%;
+  margin: 50px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 14px 16px rgb(0 0 0 / 20%), 0 -6px 10px rgb(0 0 0 / 20%);
+  border-radius: 10px;
+}
+
+.profile__container img {
+  border-radius: 50%;
+}
+
+.profile__container h5 {
+  margin-top: 20px;
+}
+
+.profile__container .brand__button {
+  padding: 10px 30px;
+}
