@@ -1,6 +1,7 @@
 import {
   faHome,
   faMoneyBillAlt,
+  faPlus,
   faQuoteLeft,
   faShoppingBag,
   faSignOutAlt,
@@ -10,6 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect } from 'react';
 import { NavLink, Route, Switch, useRouteMatch } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import AddProduct from '../AddProduct/AddProduct';
 import MyOrders from '../MyOrders/MyOrders';
 import Pay from '../Pay/Pay';
 import Profile from '../Profile/Profile';
@@ -58,6 +60,16 @@ const Dashboard = () => {
                 <FontAwesomeIcon icon={faMoneyBillAlt} /> Pay Us
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to={`${url}/add-product`}
+                activeClassName='sidebar__active'
+              >
+                {' '}
+                <FontAwesomeIcon icon={faPlus} />
+                Add Product
+              </NavLink>
+            </li>
             <li onClick={logOut}>
               <FontAwesomeIcon icon={faSignOutAlt} /> Sign Out
             </li>
@@ -80,6 +92,7 @@ const Dashboard = () => {
           <Route path={`${path}/my-orders`} component={MyOrders} />
           <Route path={`${path}/review`} component={Review} />
           <Route path={`${path}/pay`} component={Pay} />
+          <Route path={`${path}/add-product`} component={AddProduct} />
         </Switch>
       </div>
     </section>
