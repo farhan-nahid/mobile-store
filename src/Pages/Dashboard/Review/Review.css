@@ -1,0 +1,114 @@
+.review {
+  margin: 100px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.review__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review__image img {
+  width: 90%;
+}
+
+.review__form {
+  width: 80%;
+  margin: 50px auto;
+  box-shadow: 0 14px 16px rgb(0 0 0 / 20%), 0 -6px 10px rgb(0 0 0 / 20%);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.review__form h2 {
+  text-align: center;
+}
+
+.review form {
+  padding: 30px;
+}
+
+.review__form .brand__button {
+  padding: 12px 30px;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.review__input {
+  width: 90%;
+  background: white;
+  padding: 30px;
+  margin: 50px auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.review__input .brand__button {
+  margin-top: 50px;
+}
+
+.review__input .inputs {
+  height: 40px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.review__input .inputs input,
+.review__input .inputs textarea {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s;
+  display: block;
+}
+
+.review__input .inputs textarea {
+  height: 80px;
+}
+
+.review__input .inputs input:focus,
+.review__input .inputs textarea:focus {
+  border-color: #f83292;
+}
+
+.review__input .inputs label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  pointer-events: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.review__input .inputs input:focus ~ label,
+.review__input .inputs textarea:focus ~ label,
+.review__input .inputs input:valid ~ label,
+.review__input .inputs textarea:valid ~ label {
+  transform: translateY(-25px);
+  color: #f83292;
+}
+
+@media only screen and (max-width: 770px) {
+  .review {
+    margin: 50px 0;
+    grid-template-columns: 1fr;
+  }
+
+  .review__input {
+    width: 90%;
+  }
+}

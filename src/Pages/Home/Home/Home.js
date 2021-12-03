@@ -4,6 +4,7 @@ import Navigation from '../../SharedComponents/Navigation/Navigation';
 import Banner from '../Banner/Banner';
 import ContactUs from '../ContactUs/ContactUs';
 import Subscribe from '../Subscribe/Subscribe';
+import Testimonials from '../Testimonials/Testimonials';
 
 const Home = () => {
   useEffect(() => {
@@ -15,6 +16,7 @@ const Home = () => {
       <Navigation />
       <Banner />
       <Subscribe />
+      <Testimonials />
       <ContactUs />
       <Footer />
     </>
