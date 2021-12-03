@@ -46,7 +46,7 @@ https://mobiles--store.herokuapp.com/
 - [x] Axios
 - [x] JWT Token
 - [x] Hooks (useState, useEffect, useHistory, useLocation, useRef)
-- [x] Custom Hooks (useAuth, useFirebase, useServices)
+- [x] Custom Hooks (useAuth, useFirebase, useProducts)
 - [x] Context API
 - [x] Font Awesome Icons
 - [x] React Hot Toast
