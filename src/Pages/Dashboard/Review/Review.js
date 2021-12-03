@@ -46,9 +46,9 @@ const Review = () => {
   };
 
   return (
-    <section>
+    <section className='user__review'>
+      <h3>Review Us</h3>
       <div className='review__form'>
-        <h2 className='brand__color'>Review Us</h2>
         <form className='review__input' onSubmit={handelReviewSubmit}>
           <div className='inputs'>
             <input

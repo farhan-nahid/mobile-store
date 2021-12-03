@@ -60,7 +60,6 @@ const ManageOrders = () => {
     axios
       .put(`http://localhost:5000/order/${id}`, modifiedStatus)
       .then((res) => {
-        console.log(res);
         if (res.status === 200) {
           toast.dismiss(loading);
           toast.success(`Order is ${modifiedStatus.status}`);
