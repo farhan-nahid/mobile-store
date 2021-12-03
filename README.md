@@ -43,11 +43,10 @@ https://mobiles--store.herokuapp.com/
 - [x] JSX
 - [x] CSS3
 - [x] React Router Dom (5.3.0)
-- [x] React Hook Form
 - [x] Axios
 - [x] JWT Token
 - [x] Hooks (useState, useEffect, useHistory, useLocation, useRef)
-- [x] Custom Hooks (useAuth, useFirebase)
+- [x] Custom Hooks (useAuth, useFirebase, useServices)
 - [x] Context API
 - [x] Font Awesome Icons
 - [x] React Hot Toast
