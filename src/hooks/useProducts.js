@@ -10,7 +10,7 @@ const useProducts = () => {
       .then((res) => setProducts(res.data))
       .catch((err) => toast.error(err.message));
   }, []);
-  return [products, setProducts];
+  return [products];
 };
 
 export default useProducts;
