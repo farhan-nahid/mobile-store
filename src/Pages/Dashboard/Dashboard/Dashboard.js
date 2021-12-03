@@ -29,7 +29,9 @@ const Dashboard = () => {
   return (
     <section className='dashboard__grid'>
       <aside>
-        <h3 className='brand__color'>Mobile Store</h3>
+        <NavLink to='/'>
+          <h3 className='brand__color'>Mobile Store</h3>
+        </NavLink>
         <div className='aside__nav'>
           <ul className='aside__nav__link'>
             <li>

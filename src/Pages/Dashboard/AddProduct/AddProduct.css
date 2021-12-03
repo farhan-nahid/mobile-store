@@ -1,5 +1,5 @@
 .add__product {
-  margin: 50px auto;
+  margin: 50px 0;
 }
 
 .add__product h3 {
@@ -42,7 +42,7 @@
 
 .add__product__form .inputs input,
 .add__product__form .inputs textarea {
-  width: 100%;
+  width: 90%;
   height: 40px;
   border: none;
   border-bottom: 1px solid gray;

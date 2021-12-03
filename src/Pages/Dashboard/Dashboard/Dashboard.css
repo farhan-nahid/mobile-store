@@ -72,3 +72,39 @@ aside .brand__button {
   border-radius: 10px;
   padding: 10px 20px;
 }
+
+@media only screen and (max-width: 1150px) {
+  .dashboard__grid {
+    grid-template-columns: 1fr;
+  }
+
+  aside {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  aside h3 {
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  aside .aside__nav {
+    height: auto;
+    display: inline-block;
+    margin-top: 10px;
+    /* justify-content: start; */
+  }
+
+  aside .aside__nav ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  aside .aside__nav ul li {
+    padding-left: 10px;
+  }
+
+  aside .aside__nav__link li {
+    font-size: 14px;
+  }
+}
