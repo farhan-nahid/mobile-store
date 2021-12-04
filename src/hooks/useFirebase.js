@@ -17,6 +17,7 @@ import initializeAuthentication from '../Pages/Auth/Firebase/firebase.init';
 const useFirebase = () => {
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   initializeAuthentication();
   const googleProvider = new GoogleAuthProvider();
@@ -111,7 +112,11 @@ const useFirebase = () => {
     const user = { email, displayName };
     axios
       .post('http://localhost:5000/users', user)
-      .then((res) => console.log(res.data))
+      .then((res) => {
+        if (res.data.upsertedId) {
+          toast.success('User Added in our Database Successfully!');
+        }
+      })
       .catch((err) => toast.error(err.message));
   };
 
@@ -121,7 +126,11 @@ const useFirebase = () => {
     const user = { email, displayName };
     axios
       .put('http://localhost:5000/users', user)
-      .then((res) => console.log(res.data))
+      .then((res) => {
+        if (res.data.upsertedId) {
+          toast.success('User Added in our Database Successfully!');
+        }
+      })
       .catch((err) => toast.error(err.message));
   };
 
@@ -151,9 +160,19 @@ const useFirebase = () => {
     return () => unSubscrived;
   }, [auth]);
 
+  // Check Admin or not
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:5000/user/${loggedInUser?.email}`)
+      .then((res) => setIsAdmin(res.data.admin))
+      .catch((err) => toast.error(err.message));
+  }, [loggedInUser?.email]);
+
   return {
     isLoading,
     loggedInUser,
+    isAdmin,
     googleSignIn,
     gitHubSignIn,
     emailSignup,

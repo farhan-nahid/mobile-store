@@ -25,6 +25,7 @@ const AddAdmin = () => {
               icon: 'success',
               button: 'OK!',
             });
+            e.target.reset();
           }
         })
         .catch((err) => toast.error(err.message))

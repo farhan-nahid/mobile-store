@@ -9,9 +9,7 @@ import {
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import toast from 'react-hot-toast';
+import React, { useEffect } from 'react';
 import { NavLink, Route, Switch, useRouteMatch } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import AdminRoute from '../../Auth/AdminRoute/AdminRoute';
@@ -26,18 +24,8 @@ import Review from '../Review/Review';
 import './Dashboard.css';
 
 const Dashboard = () => {
-  const [admin, setAdmin] = useState(false);
   let { path, url } = useRouteMatch();
-  const { logOut, loggedInUser } = useAuth();
-
-  useEffect(() => {
-    axios
-      .get(`http://localhost:5000/user/${loggedInUser.email}`)
-      .then((res) => setAdmin(res.data?.admin))
-      .catch((err) => toast.error(err.message));
-  }, [loggedInUser.email]);
-
-  console.log(admin);
+  const { logOut, isAdmin } = useAuth();
 
   useEffect(() => {
     document.title = 'Dashboard | Mobile Store';
@@ -57,7 +45,7 @@ const Dashboard = () => {
                 <FontAwesomeIcon icon={faUser} /> My Profile
               </NavLink>
             </li>
-            {!admin ? (
+            {!isAdmin ? (
               <>
                 <li>
                   <NavLink
@@ -163,10 +151,6 @@ const Dashboard = () => {
           <AdminRoute path={`${path}/add-admin`}>
             <AddAdmin />
           </AdminRoute>
-          {/* <Route path={`${path}/add-product`} component={AddProduct} />
-          <Route path={`${path}/manage-products`} component={ManageProducts} />
-          <Route path={`${path}/manage-orders`} component={ManageOrders} />
-          <Route path={`${path}/add-admin`} component={AddAdmin} /> */}
         </Switch>
       </div>
     </section>
