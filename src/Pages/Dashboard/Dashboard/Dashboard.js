@@ -1,4 +1,5 @@
 import {
+  faClipboardList,
   faHome,
   faList,
   faMoneyBillAlt,
@@ -87,16 +88,6 @@ const Dashboard = () => {
                 </li>
                 <li>
                   <NavLink
-                    to={`${url}/add-admin`}
-                    activeClassName='sidebar__active'
-                  >
-                    {' '}
-                    <FontAwesomeIcon icon={faPlus} />
-                    Add Admin
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
                     to={`${url}/manage-products`}
                     activeClassName='sidebar__active'
                   >
@@ -107,11 +98,21 @@ const Dashboard = () => {
                 </li>
                 <li>
                   <NavLink
+                    to={`${url}/add-admin`}
+                    activeClassName='sidebar__active'
+                  >
+                    {' '}
+                    <FontAwesomeIcon icon={faPlus} />
+                    Add Admin
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
                     to={`${url}/manage-orders`}
                     activeClassName='sidebar__active'
                   >
                     {' '}
-                    <FontAwesomeIcon icon={faList} />
+                    <FontAwesomeIcon icon={faClipboardList} />
                     Manage Orders
                   </NavLink>
                 </li>
