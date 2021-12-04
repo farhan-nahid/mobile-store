@@ -2,6 +2,7 @@ import axios from 'axios';
 import {
   createUserWithEmailAndPassword,
   getAuth,
+  getIdToken,
   GithubAuthProvider,
   GoogleAuthProvider,
   onAuthStateChanged,
@@ -152,6 +153,9 @@ const useFirebase = () => {
     const unSubscrived = onAuthStateChanged(auth, (user) => {
       if (user) {
         setLoggedInUser(user);
+        getIdToken(user).then((idToken) => {
+          localStorage.setItem('id_token', idToken);
+        });
       } else {
         setLoggedInUser(null);
       }

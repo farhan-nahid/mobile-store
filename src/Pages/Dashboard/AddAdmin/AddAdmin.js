@@ -16,12 +16,16 @@ const AddAdmin = () => {
     } else {
       const user = { email: email };
       axios
-        .put('https://mobiles--store.herokuapp.com/users/admin', user)
+        .put('http://localhost:5000/users/admin', user, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem('id_token')}`,
+          },
+        })
         .then((res) => {
           if (res.data.matchedCount) {
             swal({
               title: 'Good job!',
-              text: `You Added ${user.email} as an Admin!!!`,
+              text: `You Added ${user.email} as an Admin!`,
               icon: 'success',
               button: 'OK!',
             });
