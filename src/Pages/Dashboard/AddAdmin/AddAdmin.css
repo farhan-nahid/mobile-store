@@ -15,13 +15,15 @@
   background-color: #fff;
   border-radius: 15px;
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 10px 30px;
 }
 
 .admin__add__form .brand__button {
   padding: 10px 30px;
   height: 50px;
+  border-radius: 10px;
+  width: 124px;
 }
 
 .admin__add__form .inputs {
@@ -33,7 +35,7 @@
 
 .admin__add__form .inputs input,
 .admin__add__form .inputs textarea {
-  width: 90%;
+  width: 100%;
   height: 40px;
   border: none;
   border-bottom: 1px solid gray;

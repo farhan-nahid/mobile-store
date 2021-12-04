@@ -20,9 +20,9 @@ const Home = () => {
       <Banner />
       <Products />
       <Subscribe />
-      <Testimonials />
-      <Counter />
       <LoanSystem />
+      <Counter />
+      <Testimonials />
       <ContactUs />
       <Footer />
     </>

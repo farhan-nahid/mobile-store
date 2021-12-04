@@ -2,6 +2,10 @@
   position: relative;
 }
 
+#loan {
+  margin: 50px 0;
+}
+
 #loan h3 {
   text-align: center;
 }

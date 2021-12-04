@@ -4,6 +4,25 @@
   text-align: center;
   border-radius: 10px;
   height: 350px;
+  position: relative;
+}
+
+.testimonial__card .quote__icon__right {
+  position: absolute;
+  bottom: 37px;
+  right: 15px;
+  font-size: 65px;
+  opacity: 0.3;
+  color: #f83292;
+}
+
+.testimonial__card .quote__icon__left {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 65px;
+  opacity: 0.3;
+  color: #f83292;
 }
 
 .testimonial__card .testimonial__image {

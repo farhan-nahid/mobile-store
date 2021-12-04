@@ -20,6 +20,8 @@ const Testimonial = ({ review: { ratting, image, name, message, email } }) => {
       <div className='testimonial__image'>
         <img src={image} alt={name} />
       </div>
+      <i className='fas fa-quote-right quote__icon__right'></i>
+      <i className='fas fa-quote-left quote__icon__left'></i>
       <h5 className='brand__color'>{name}</h5>
       <div className='testimonial__description'>
         <p>{message}</p>
