@@ -3,6 +3,8 @@ import Footer from '../../SharedComponents/Footer/Footer';
 import Navigation from '../../SharedComponents/Navigation/Navigation';
 import Banner from '../Banner/Banner';
 import ContactUs from '../ContactUs/ContactUs';
+import Counter from '../Counter/Counter';
+import LoanSystem from '../LoanSystem/LoanSystem';
 import Products from '../Products/Products';
 import Subscribe from '../Subscribe/Subscribe';
 import Testimonials from '../Testimonials/Testimonials';
@@ -19,6 +21,8 @@ const Home = () => {
       <Products />
       <Subscribe />
       <Testimonials />
+      <Counter />
+      <LoanSystem />
       <ContactUs />
       <Footer />
     </>

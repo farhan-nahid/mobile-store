@@ -24,6 +24,7 @@
 .card__content h4,
 .card__content p {
   text-align: center;
+  color: #3c3c3c;
 }
 
 .card__price__button {
