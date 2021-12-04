@@ -15,19 +15,18 @@ const LoadSystem = () => {
             </p>
             <ul>
               <li>
-                <i className='fas fa-check-circle right__icon'></i> 1000+
-                Downloads
+                <i className='fas fa-check-circle right__icon'></i> Service
+                Warranty
               </li>
               <li>
-                <i className='fas fa-times-circle wrong__icon'></i> Unlimited
-                Storage
+                <i className='fas fa-times-circle wrong__icon'></i> Eid Offer
               </li>
               <li>
-                <i className='fas fa-check-circle right__icon'></i> 5 Downloads
+                <i className='fas fa-check-circle right__icon'></i> 2 year Time
               </li>
               <li>
-                <i className='fas fa-times-circle wrong__icon'></i> No
-                Transaction Fees
+                <i className='fas fa-times-circle wrong__icon'></i> Exchange
+                Offer
               </li>
             </ul>
             <button className='brand__button'>Check Out</button>
@@ -41,19 +40,18 @@ const LoadSystem = () => {
             </p>
             <ul>
               <li>
-                <i className='fas fa-check-circle right__icon'></i> 1000+
-                Downloads
+                <i className='fas fa-check-circle right__icon'></i> Eid Offer
               </li>
               <li>
-                <i className='fas fa-times-circle wrong__icon'></i> Unlimited
-                Storage
+                <i className='fas fa-times-circle wrong__icon'></i> Exchange
+                Offer
               </li>
               <li>
-                <i className='fas fa-check-circle right__icon'></i> 5 Downloads
+                <i className='fas fa-check-circle right__icon'></i> Service
+                Warranty
               </li>
               <li>
-                <i className='fas fa-check-circle right__icon'></i> No
-                Transaction Fees
+                <i className='fas fa-check-circle right__icon'></i> 2 year Time
               </li>
             </ul>
             <button className='brand__button'>Check Out</button>
@@ -67,19 +65,18 @@ const LoadSystem = () => {
             </p>
             <ul>
               <li>
-                <i className='fas fa-check-circle right__icon'></i> 1000+
-                Downloads
+                <i className='fas fa-check-circle right__icon'></i> Eid Offer
               </li>
               <li>
-                <i className='fas fa-check-circle right__icon'></i> Unlimited
-                Storage
+                <i className='fas fa-check-circle right__icon'></i> Service
+                Warranty
               </li>
               <li>
-                <i className='fas fa-check-circle right__icon'></i> 5 Downloads
+                <i className='fas fa-check-circle right__icon'></i> Exchange
+                Offer
               </li>
               <li>
-                <i className='fas fa-check-circle right__icon'></i> No
-                Transaction Fees
+                <i className='fas fa-check-circle right__icon'></i> 2 year Time
               </li>
             </ul>
             <button className='brand__button'>Check Out</button>
