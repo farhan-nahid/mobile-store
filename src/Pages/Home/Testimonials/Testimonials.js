@@ -10,7 +10,7 @@ const Testimonials = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/all-reviews')
+      .get('https://mobiles--store.herokuapp.com/all-reviews')
       .then((res) => setTestimonials(res.data))
       .catch((err) => toast.error(err.message));
   }, []);

@@ -29,7 +29,7 @@ const Review = () => {
     }
 
     axios
-      .post('http://localhost:5000/add-reviews', reviewData)
+      .post('https://mobiles--store.herokuapp.com/add-reviews', reviewData)
       .then((res) => {
         if (res.data.insertedId) {
           swal({

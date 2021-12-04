@@ -16,7 +16,7 @@ const AddAdmin = () => {
     } else {
       const user = { email: email };
       axios
-        .put('http://localhost:5000/users/admin', user)
+        .put('https://mobiles--store.herokuapp.com/users/admin', user)
         .then((res) => {
           if (res.data.matchedCount) {
             swal({

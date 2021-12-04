@@ -20,7 +20,7 @@ const MyOrderCard = ({ item, orders, setOrders }) => {
       if (willDelete) {
         const loading = toast.loading('Deleting...Please Wait!!');
         axios
-          .delete(`http://localhost:5000/order/${id}`)
+          .delete(`https://mobiles--store.herokuapp.com/order/${id}`)
           .then((res) => {
             if (res.data.deletedCount) {
               swal('Your Order has been deleted!!', {

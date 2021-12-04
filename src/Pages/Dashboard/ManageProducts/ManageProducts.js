@@ -23,7 +23,7 @@ const ManageProducts = () => {
       if (willDelete) {
         const loading = toast.loading('Deleting...Please Wait!!');
         axios
-          .delete(`http://localhost:5000/product/${id}`)
+          .delete(`https://mobiles--store.herokuapp.com/product/${id}`)
           .then((res) => {
             if (res.data.deletedCount) {
               swal('Your Selected Product has been deleted!!', {

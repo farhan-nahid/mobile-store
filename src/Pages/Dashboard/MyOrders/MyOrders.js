@@ -11,7 +11,9 @@ const MyOrders = () => {
   const { loggedInUser } = useAuth();
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/all-orders?email=${loggedInUser.email}`)
+      .get(
+        `https://mobiles--store.herokuapp.com/all-orders?email=${loggedInUser.email}`
+      )
       .then((res) => setOrders(res.data))
       .catch((err) => toast.error(err.message));
   }, [loggedInUser.email]);

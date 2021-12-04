@@ -43,7 +43,7 @@ const AddProduct = () => {
       const product = data;
       product.image = image;
       axios
-        .post('http://localhost:5000/add-product', product)
+        .post('https://mobiles--store.herokuapp.com/add-product', product)
         .then((res) => {
           if (res.data.insertedId) {
             swal({

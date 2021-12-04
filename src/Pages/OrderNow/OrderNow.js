@@ -27,7 +27,7 @@ const OrderNow = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/product/${id}`)
+      .get(`https://mobiles--store.herokuapp.com/product/${id}`)
       .then((res) => setSelectedProduct(res.data))
       .catch((err) => toast.err(err.message));
   }, [id]);
@@ -65,19 +65,21 @@ const OrderNow = () => {
     order.email = loggedInUser.email;
     order.address = addressRef.current.value;
     order.status = 'Pending';
-    axios.post('http://localhost:5000/order', order).then((res) => {
-      if (res.status === 200) {
-        swal({
-          title: 'Congratulations!',
-          text: `You Order ${productCount} pics of ${name}!!`,
-          icon: 'success',
-          button: 'OK!',
-          position: 'center',
-        });
-        setProductCount(1);
-        history.push('/dashboard/my-orders');
-      }
-    });
+    axios
+      .post('https://mobiles--store.herokuapp.com/order', order)
+      .then((res) => {
+        if (res.status === 200) {
+          swal({
+            title: 'Congratulations!',
+            text: `You Order ${productCount} pics of ${name}!!`,
+            icon: 'success',
+            button: 'OK!',
+            position: 'center',
+          });
+          setProductCount(1);
+          history.push('/dashboard/my-orders');
+        }
+      });
   };
 
   return (
