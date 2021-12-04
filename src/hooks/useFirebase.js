@@ -1,3 +1,4 @@
+import axios from 'axios';
 import {
   createUserWithEmailAndPassword,
   getAuth,
@@ -29,6 +30,10 @@ const useFirebase = () => {
       .then((userCredential) => {
         toast.success('Logged in successfully...');
         setLoggedInUser(userCredential.user);
+        saveUserForOthers(
+          userCredential.user.email,
+          userCredential.user.displayName
+        );
         const redirect_URI = location.state?.from || '/';
         history.replace(redirect_URI);
       })
@@ -45,6 +50,10 @@ const useFirebase = () => {
       .then((userCredential) => {
         toast.success('Logged in successfully...');
         setLoggedInUser(userCredential.user);
+        saveUserForOthers(
+          userCredential.user.email,
+          userCredential.user.displayName
+        );
         const redirect_URI = location.state?.from || '/';
         history.replace(redirect_URI);
       })
@@ -64,6 +73,7 @@ const useFirebase = () => {
           photoURL: 'https://i.ibb.co/G31TsrC/user.png',
           displayName: name,
         });
+        saveUserForEmail(email, name);
         toast.dismiss(loading);
         toast.success('Creating a new user successfully...');
         setLoggedInUser(userCredential.user);
@@ -93,6 +103,26 @@ const useFirebase = () => {
         toast.error(error.message);
       })
       .finally(() => setIsLoading(false));
+  };
+
+  // save user to mongoDB
+
+  const saveUserForEmail = (email, displayName) => {
+    const user = { email, displayName };
+    axios
+      .post('http://localhost:5000/users', user)
+      .then((res) => console.log(res.data))
+      .catch((err) => toast.error(err.message));
+  };
+
+  // save user to mongoDB
+
+  const saveUserForOthers = (email, displayName) => {
+    const user = { email, displayName };
+    axios
+      .put('http://localhost:5000/users', user)
+      .then((res) => console.log(res.data))
+      .catch((err) => toast.error(err.message));
   };
 
   // signOut function

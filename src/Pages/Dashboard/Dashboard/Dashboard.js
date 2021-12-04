@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect } from 'react';
 import { NavLink, Route, Switch, useRouteMatch } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import AddAdmin from '../AddAdmin/AddAdmin';
 import AddProduct from '../AddProduct/AddProduct';
 import ManageOrders from '../ManageOrders/ManageOrders';
 import ManageProducts from '../ManageProducts/ManageProducts';
@@ -77,6 +78,16 @@ const Dashboard = () => {
             </li>
             <li>
               <NavLink
+                to={`${url}/add-admin`}
+                activeClassName='sidebar__active'
+              >
+                {' '}
+                <FontAwesomeIcon icon={faPlus} />
+                Add Admin
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to={`${url}/manage-products`}
                 activeClassName='sidebar__active'
               >
@@ -120,6 +131,7 @@ const Dashboard = () => {
           <Route path={`${path}/add-product`} component={AddProduct} />
           <Route path={`${path}/manage-products`} component={ManageProducts} />
           <Route path={`${path}/manage-orders`} component={ManageOrders} />
+          <Route path={`${path}/add-admin`} component={AddAdmin} />
         </Switch>
       </div>
     </section>

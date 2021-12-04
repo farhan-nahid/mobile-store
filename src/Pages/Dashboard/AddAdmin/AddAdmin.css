@@ -8,3 +8,69 @@
   color: #333;
   font-weight: 500;
 }
+
+.admin__add__form {
+  padding: 50px 30px;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 10px 30px;
+}
+
+.admin__add__form .brand__button {
+  padding: 10px 30px;
+  height: 50px;
+}
+
+.admin__add__form .inputs {
+  height: 40px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.admin__add__form .inputs input,
+.admin__add__form .inputs textarea {
+  width: 90%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s;
+  display: block;
+}
+
+.admin__add__form .inputs textarea {
+  height: 150px;
+}
+
+.admin__add__form .inputs input:focus,
+.admin__add__form .inputs textarea:focus {
+  border-color: #f83292;
+}
+
+.admin__add__form .inputs label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  pointer-events: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.admin__add__form .inputs input:focus ~ label,
+.admin__add__form .inputs textarea:focus ~ label,
+.admin__add__form .inputs input:valid ~ label,
+.admin__add__form .inputs textarea:valid ~ label {
+  transform: translateY(-25px);
+  color: #f83292;
+}
+
+@media only screen and (max-width: 770px) {
+  .admin__add__form {
+    width: 90%;
+  }
+}
