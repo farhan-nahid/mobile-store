@@ -9,6 +9,7 @@ import './MyOrders.css';
 const MyOrders = () => {
   const [orders, setOrders] = useState([]);
   const { loggedInUser } = useAuth();
+
   useEffect(() => {
     axios
       .get(
@@ -22,7 +23,7 @@ const MyOrders = () => {
     <section className='my__order__container'>
       <h3>My Order</h3>
       {orders.length ? (
-        <div className='my__orders'>
+        <div className='my__orders container'>
           {orders.map((item) => (
             <MyOrderCard
               key={item._id}

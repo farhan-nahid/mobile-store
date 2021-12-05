@@ -36,3 +36,9 @@
 .profile__container .brand__button {
   padding: 10px 30px;
 }
+
+@media only screen and (max-width: 770px) {
+  .profile__container {
+    width: 90%;
+  }
+}

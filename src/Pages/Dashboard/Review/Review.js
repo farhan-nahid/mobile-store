@@ -48,18 +48,30 @@ const Review = () => {
   return (
     <section className='user__review'>
       <h3>Review Us</h3>
-      <div className='review__form'>
+      <div className='review__form container'>
         <form className='review__input' onSubmit={handelReviewSubmit}>
-          <div className='inputs'>
-            <input
-              defaultValue={loggedInUser.displayName}
-              name='name'
-              type='text'
-              required
-              autoComplete='off'
-              onBlur={handelBlur}
-            />
-            <label>Name</label>
+          <div className='simple__grid'>
+            <div className='inputs'>
+              <input
+                defaultValue={loggedInUser.displayName}
+                name='name'
+                type='text'
+                required
+                autoComplete='off'
+                onBlur={handelBlur}
+              />
+              <label>Name</label>
+            </div>
+            <div className='ratting__area'>
+              <label htmlFor='star__count'>Ratting</label>
+              <select name='ratting' id='star__count' onBlur={handelBlur}>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+              </select>
+            </div>
           </div>
           <div className='inputs'>
             <input
@@ -72,17 +84,6 @@ const Review = () => {
             />
             <label>Email</label>
           </div>
-          <div className='inputs'>
-            <input
-              name='ratting'
-              type='number'
-              required
-              autoComplete='off'
-              onBlur={handelBlur}
-            />
-            <label>Your Ratting (0-5)</label>
-          </div>
-
           <div className='inputs'>
             <textarea
               name='message'

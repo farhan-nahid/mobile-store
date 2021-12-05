@@ -1,9 +1,9 @@
 .user__review {
-  margin: 50px 0;
+  margin: 0 0 50px 0;
 }
 
 .user__review h3 {
-  padding: 10px;
+  padding: 20px;
   background-color: #fff;
   color: #333;
   font-weight: 500;
@@ -42,6 +42,20 @@
   padding: 30px;
 }
 
+.simple__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.ratting__area label {
+  margin-right: 20px;
+}
+
+.ratting__area select {
+  border: 1px solid gray;
+  padding: 5px 15px;
+}
+
 .review__form .brand__button {
   padding: 12px 30px;
 }
@@ -65,7 +79,7 @@ input[type='number'] {
 }
 
 .review__input .brand__button {
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .review__input .inputs {
@@ -88,7 +102,7 @@ input[type='number'] {
 }
 
 .review__input .inputs textarea {
-  height: 80px;
+  height: 120px;
 }
 
 .review__input .inputs input:focus,
@@ -121,5 +135,10 @@ input[type='number'] {
 
   .review__input {
     width: 90%;
+  }
+
+  .simple__grid {
+    margin-bottom: 40px;
+    grid-template-columns: 1fr;
   }
 }
