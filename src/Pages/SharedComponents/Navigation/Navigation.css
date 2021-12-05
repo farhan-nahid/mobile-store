@@ -26,10 +26,12 @@ nav img {
   justify-content: space-between;
   align-items: center;
   margin: 0;
+  padding: 0;
 }
 
 .logo {
   list-style-type: none;
+  padding: 0;
 }
 
 .logo li {
@@ -87,6 +89,10 @@ nav .brand__button {
 }
 
 @media only screen and (max-width: 770px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
   .nav__items {
     position: fixed;
     top: 70px;
