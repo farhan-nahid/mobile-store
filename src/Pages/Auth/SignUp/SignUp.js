@@ -54,7 +54,7 @@ const SignUp = () => {
     <>
       <Navigation />
       <section className='signUp__bg'>
-        <div className='container grid__container'>
+        <div className='container flex__container'>
           <div className='right__border'>
             <form className='login__signUp__input' onSubmit={handleEmailSignUp}>
               <div className='inputs'>
@@ -118,7 +118,7 @@ const SignUp = () => {
               GitHub sign in
             </button>
           </div>
-          <div className='signup__img'>
+          <div className='signUp__img'>
             <img src={signupImg} alt='signup' />
           </div>
         </div>

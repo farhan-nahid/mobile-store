@@ -196,4 +196,8 @@ input[type='submit']:hover {
   .grid__container {
     margin: 150px auto;
   }
+
+  .login__signUp__input {
+    width: 100%;
+  }
 }
