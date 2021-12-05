@@ -10,7 +10,7 @@ const Profile = () => {
   return (
     <section className='my__profile'>
       <h3>My Profile</h3>
-      <div className='profile__container'>
+      <div className='container profile__container'>
         <img src={photoURL} alt={displayName} />
         <h5>{displayName}</h5>
         <p>{email}</p>

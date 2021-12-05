@@ -11,7 +11,13 @@ import './ManageProduct.css';
 const ManageProducts = () => {
   const [products, setProducts] = useProducts();
 
-  const handleUpdateProduct = () => {};
+  const handleUpdateProduct = () => {
+    swal(
+      'Permission restriction!',
+      'This Feature will implement soon.',
+      'info'
+    );
+  };
   const handleDeleteProduct = (id) => {
     swal({
       title: 'Are you sure?',
@@ -44,7 +50,7 @@ const ManageProducts = () => {
   return (
     <section className='product__manage'>
       <h3>Manage product</h3>
-      <div className='product__manage__products'>
+      <div className='container product__manage__products'>
         <div className='product__manage__content'>
           <div className='product__row'>
             <div className='product__col'>

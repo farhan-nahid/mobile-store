@@ -133,7 +133,7 @@ const Dashboard = () => {
         </div>
       </aside>
 
-      <div className='container'>
+      <>
         <Switch>
           <Route exact path={path} component={Profile} />
           <Route path={`${path}/profile`} component={Profile} />
@@ -153,7 +153,7 @@ const Dashboard = () => {
             <AddAdmin />
           </AdminRoute>
         </Switch>
-      </div>
+      </>
     </section>
   );
 };

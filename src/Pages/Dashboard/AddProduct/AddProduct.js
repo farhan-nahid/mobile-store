@@ -1,3 +1,5 @@
+import { faUpload } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
@@ -62,52 +64,60 @@ const AddProduct = () => {
   return (
     <section className='add__product'>
       <h3> Add Product</h3>
-      <h5 className='warning__text'>Please upload a image (PNG, JPG, JPEG)</h5>
-      <form className='add__product__form' onSubmit={handleProductSubmit}>
-        <div className='inputs'>
-          <input
-            name='name'
-            type='text'
-            required
-            autoComplete='off'
-            onBlur={handelBlur}
-          />
-          <label>Product Name</label>
-        </div>
-        <div className='inputs'>
-          <input
-            name='price'
-            type='number'
-            required
-            autoComplete='off'
-            onBlur={handelBlur}
-          />
-          <label>Product Price</label>
-        </div>
+      <div className='container'>
+        <h5 className='warning__text'>
+          Please upload a image (PNG, JPG, JPEG)
+        </h5>
+        <form className='add__product__form' onSubmit={handleProductSubmit}>
+          <div className='inputs'>
+            <input
+              name='name'
+              type='text'
+              required
+              autoComplete='off'
+              onBlur={handelBlur}
+            />
+            <label>Product Name</label>
+          </div>
+          <div className='inputs'>
+            <input
+              name='price'
+              type='number'
+              required
+              autoComplete='off'
+              onBlur={handelBlur}
+            />
+            <label>Product Price</label>
+          </div>
 
-        <div className='inputs'>
-          <textarea
-            name='description'
-            required
-            autoComplete='off'
-            onBlur={handelBlur}
-          />
-          <label>Product Description</label>
-        </div>
-        <div>
-          <label htmlFor='img'>Image</label>
-          <input
-            type='file'
-            className='form-control'
-            id='img'
-            onChange={handleImageUpload}
-          />
-        </div>
+          <div className='inputs'>
+            <textarea
+              name='description'
+              required
+              autoComplete='off'
+              onBlur={handelBlur}
+            />
+            <label>Product Description</label>
+          </div>
+          <div className='input__sm'>
+            <input
+              type='file'
+              name='image'
+              id='file'
+              className='inputFile'
+              onChange={handleImageUpload}
+            />
+            <label htmlFor='file'>
+              {' '}
+              <FontAwesomeIcon icon={faUpload} /> Choose an Image
+            </label>
+          </div>
 
-        <div className='add__button'>
-          <input type='submit' className='brand__button mt-5' />
-        </div>
-      </form>
+          <div className='add__button'>
+            <input type='submit' className='brand__button mt-5' />
+          </div>
+        </form>
+      </div>
     </section>
   );
 };

@@ -40,7 +40,7 @@ const AddAdmin = () => {
   return (
     <section className='add__admin'>
       <h3>Add New Admin</h3>
-      <form onSubmit={handelAdmin} className='admin__add__form'>
+      <form onSubmit={handelAdmin} className='admin__add__form container'>
         <div className='inputs'>
           <input
             name='name'

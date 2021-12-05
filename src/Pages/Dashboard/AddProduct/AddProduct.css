@@ -1,9 +1,9 @@
 .add__product {
-  margin: 50px 0;
+  margin: 0 0 50px 0;
 }
 
 .add__product h3 {
-  padding: 10px;
+  padding: 20px;
   background-color: #fff;
   color: #333;
   font-weight: 500;
@@ -12,6 +12,7 @@
   background: #febf019c;
   padding: 10px;
   margin-top: 20px;
+  border-radius: 5px;
 }
 
 .add__product__form {
@@ -22,6 +23,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px 30px;
+  align-content: center;
 }
 
 .add__product__form .add__button {
@@ -78,8 +80,56 @@
   color: #f83292;
 }
 
+.inputFile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputFile + label {
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+  background-image: linear-gradient(90deg, #814096, #f83292);
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 10px;
+}
+
+.inputFile + label .fa-upload {
+  margin-right: 15px;
+}
+
+.inputFile:focus + label,
+.inputFile + label:hover {
+  background-image: linear-gradient(90deg, #f83292, #814096);
+}
+
+.inputFile + label {
+  cursor: pointer;
+}
+
+.inputFile:focus + label {
+  outline: 1px solid #f83292 !important;
+}
+
 @media only screen and (max-width: 770px) {
   .add__product__form {
-    width: 90%;
+    display: block;
+  }
+
+  .input__sm {
+    margin-top: 150px;
+  }
+
+  .add__product__form .add__button {
+    margin: 0 auto 0 auto;
+  }
+
+  .inputFile + label {
+    font-size: 1em;
   }
 }
