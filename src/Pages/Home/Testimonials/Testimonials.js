@@ -1,9 +1,37 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
+import SwiperCore, { Autoplay, Pagination } from 'swiper';
+import 'swiper/components/navigation/navigation.min.css';
+import 'swiper/components/pagination/pagination.min.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper.min.css';
 import LoadingSpinner from '../../SharedComponents/LoadingSpinner/LoadingSpinner';
 import Testimonial from '../Testimonial/Testimonial';
 import './Testimonials.css';
+
+SwiperCore.use([Pagination, Autoplay]);
+
+const swiperSettings = {
+  loop: true,
+  autoplay: { delay: 2500, disableOnInteraction: false },
+  spaceBetween: 20,
+  slidesPerView: 3,
+  pagination: {
+    clickable: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+  },
+};
 
 const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -19,11 +47,13 @@ const Testimonials = () => {
     <section className='testimonials container'>
       <h3>Testimonials</h3>
       {testimonials.length ? (
-        <div className='testimonial__container'>
+        <Swiper {...swiperSettings}>
           {testimonials.map((review) => (
-            <Testimonial key={review._id} review={review} />
+            <SwiperSlide key={review._id}>
+              <Testimonial review={review} />
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       ) : (
         <LoadingSpinner />
       )}

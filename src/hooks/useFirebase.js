@@ -6,6 +6,7 @@ import {
   GithubAuthProvider,
   GoogleAuthProvider,
   onAuthStateChanged,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
@@ -90,13 +91,14 @@ const useFirebase = () => {
 
   // email password signIn function
 
-  const emailSignIn = (email, password, history, location) => {
+  const emailSignIn = (email, password, history, location, e) => {
     const loading = toast.loading('Finding Account... Please wait!!!');
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         toast.dismiss(loading);
         toast.success('logged in successfully...');
         setLoggedInUser(userCredential.user);
+        e.target.reset();
         const redirect_URI = location.state?.from || '/';
         history.replace(redirect_URI);
       })
@@ -107,7 +109,7 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
 
-  // save user to mongoDB
+  // save user to mongoDB (Email)
 
   const saveUserForEmail = (email, displayName) => {
     const user = { email, displayName };
@@ -121,7 +123,7 @@ const useFirebase = () => {
       .catch((err) => toast.error(err.message));
   };
 
-  // save user to mongoDB
+  // save user to mongoDB (Gmail, GitHub)
 
   const saveUserForOthers = (email, displayName) => {
     const user = { email, displayName };
@@ -133,6 +135,16 @@ const useFirebase = () => {
         }
       })
       .catch((err) => toast.error(err.message));
+  };
+
+  const resetPassword = (email, e) => {
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        toast.success('Check your mail box. We send an verification email');
+        e.target.reset();
+      })
+      .catch((err) => toast.error(err.message))
+      .finally(() => setIsLoading(false));
   };
 
   // signOut function
@@ -170,7 +182,8 @@ const useFirebase = () => {
     axios
       .get(`https://mobiles--store.herokuapp.com/user/${loggedInUser?.email}`)
       .then((res) => setIsAdmin(res.data.admin))
-      .catch((err) => toast.error(err.message));
+      .catch((err) => toast.error(err.message))
+      .finally(() => setIsLoading(false));
   }, [loggedInUser?.email]);
 
   return {
@@ -181,6 +194,7 @@ const useFirebase = () => {
     gitHubSignIn,
     emailSignup,
     emailSignIn,
+    resetPassword,
     logOut,
   };
 };

@@ -6,22 +6,3 @@
   text-align: center;
   margin-bottom: 15px;
 }
-
-.testimonial__container {
-  margin-top: 100px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 70px 20px;
-}
-
-@media only screen and (max-width: 1200px) {
-  .testimonial__container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media only screen and (max-width: 770px) {
-  .testimonial__container {
-    grid-template-columns: 1fr;
-  }
-}

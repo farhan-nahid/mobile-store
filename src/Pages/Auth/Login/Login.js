@@ -1,8 +1,8 @@
-import { faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { Link, useHistory, useLocation } from 'react-router-dom';
+import gitHubIcon from '../../../assets/images/github.png';
+import googleIcon from '../../../assets/images/google.png';
 import loginImg from '../../../assets/images/login.png';
 import useAuth from '../../../hooks/useAuth';
 import Footer from '../../SharedComponents/Footer/Footer';
@@ -32,7 +32,7 @@ const Login = () => {
     if (!/\S+@\S+\.\S+/.test(signInData.email)) {
       toast.error('Please Enter a valid Email Address..');
     } else {
-      emailSignIn(signInData.email, signInData.password, history, location);
+      emailSignIn(signInData.email, signInData.password, history, location, e);
     }
   };
 
@@ -67,6 +67,9 @@ const Login = () => {
               </div>
               <input type='submit' value='Login' />
             </form>
+            <p className='reset__email__pass'>
+              Forget password? <Link to='/reset-password'>Reset it</Link>
+            </p>
             <p className='toggle__link'>
               Don't have any Account? <Link to='/signup'>Sign up</Link>
             </p>
@@ -77,14 +80,14 @@ const Login = () => {
               className='google__button'
               onClick={() => googleSignIn(history, location)}
             >
-              <FontAwesomeIcon icon={faGoogle} />
+              <img src={googleIcon} alt='googleIcon' />
               Google sign in
             </button>
             <button
               className='github__button'
               onClick={() => gitHubSignIn(history, location)}
             >
-              <FontAwesomeIcon icon={faGithub} />
+              <img src={gitHubIcon} alt='gitHubIcon' />
               GitHub sign in
             </button>
           </div>

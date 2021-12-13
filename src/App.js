@@ -11,6 +11,7 @@ const Login = lazy(() => import('./Pages/Auth/Login/Login'));
 const SignUp = lazy(() => import('./Pages/Auth/SignUp/SignUp'));
 const OrderNow = lazy(() => import('./Pages/OrderNow/OrderNow'));
 const Products = lazy(() => import('./Pages/AllProducts/Products/Products'));
+const ResetPass = lazy(() => import('./Pages/Auth/ResetPass/ResetPassword'));
 const Dashboard = lazy(() => import('./Pages/Dashboard/Dashboard/Dashboard'));
 const NotFoundRoute = lazy(() => import('./Pages/NotFoundRoute/NotFoundRoute'));
 
@@ -27,6 +28,7 @@ function App() {
             <Route path='/products' component={Products} />
             <Route path='/login' component={Login} />
             <Route path='/signup' component={SignUp} />
+            <Route path='/reset-password' component={ResetPass} />
             <PrivateRoute path='/order/:id'>
               <OrderNow />
             </PrivateRoute>

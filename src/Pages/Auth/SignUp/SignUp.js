@@ -1,8 +1,8 @@
-import { faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { Link, useHistory } from 'react-router-dom';
+import gitHubIcon from '../../../assets/images/github.png';
+import googleIcon from '../../../assets/images/google.png';
 import signupImg from '../../../assets/images/signup.png';
 import useAuth from '../../../hooks/useAuth';
 import Footer from '../../SharedComponents/Footer/Footer';
@@ -107,14 +107,14 @@ const SignUp = () => {
               className='google__button'
               onClick={() => googleSignIn(history, '/')}
             >
-              <FontAwesomeIcon icon={faGoogle} />
+              <img src={googleIcon} alt='googleIcon' />
               Google sign in
             </button>
             <button
               className='github__button'
               onClick={() => gitHubSignIn(history, '/')}
             >
-              <FontAwesomeIcon icon={faGithub} />
+              <img src={gitHubIcon} alt='gitHubIcon' />
               GitHub sign in
             </button>
           </div>
